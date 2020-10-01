@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using HarryPotter.Models;
+using HarryPotter.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
@@ -13,13 +15,25 @@ namespace HarryPotter.Pages
     {
         public string House { get; set; }
 
+        [BindProperty]
+        public List<HouseObjects> HouseObjects { get; set; }
+
         private static readonly HttpClient client = new HttpClient();
         private string baseUrl = @"https://www.potterapi.com/v1";
+        private IHouses _houses;
 
-
-
-        public void OnGet()
+        public IndexModel(IHouses houses)
         {
+            _houses = houses;
+        }
+
+
+        public async Task<List<HouseObjects>> OnGet()
+        {
+            HouseObjects = await _houses.GetAllHouses();
+            HouseObjects results = new HouseObjects();
+            //HouseObjects.results = gettingHouseInfo;
+            return HouseObjects;
         }
 
         public async Task<IActionResult> OnPost()
