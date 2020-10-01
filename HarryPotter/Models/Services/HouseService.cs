@@ -23,7 +23,7 @@ namespace HarryPotter.Models.Services
             _client = client;
         }
 
-        public async Task<string> GetAllHouses()
+        public async Task<List<HouseObjects>> GetAllHouses()
         {
             string route = "houses";
 
@@ -33,12 +33,12 @@ namespace HarryPotter.Models.Services
 
             var response = await _client.GetStringAsync($"{ baseUrl }/{ route }" + _config["PotterApiKey"]);
 
-            string HouseName = JsonConvert.DeserializeObject<string>(response);
+            List<HouseObjects> HouseInfo = JsonConvert.DeserializeObject<List<HouseObjects>>(response);
 
-            return HouseName;
+            return HouseInfo;
         }
 
-        public Task<string> GetHouseById()
+        public Task<List<HouseObjects>> GetHouseById()
         {
             throw new NotImplementedException();
         }
