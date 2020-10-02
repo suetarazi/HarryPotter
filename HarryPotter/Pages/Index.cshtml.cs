@@ -16,7 +16,7 @@ namespace HarryPotter.Pages
         public string House { get; set; }
 
         [BindProperty]
-        public List<HouseObjects> HouseObjects { get; set; }
+        public List<HouseObject> HouseObjects { get; set; }
 
         private static readonly HttpClient client = new HttpClient();
         private string baseUrl = @"https://www.potterapi.com/v1";
@@ -28,12 +28,12 @@ namespace HarryPotter.Pages
         }
 
 
-        public async Task<List<HouseObjects>> OnGet()
+        public async Task<IActionResult> OnGet()
         {
             HouseObjects = await _houses.GetAllHouses();
-            HouseObjects results = new HouseObjects();
+            //HouseObject results = new HouseObject();
             //HouseObjects.results = gettingHouseInfo;
-            return HouseObjects;
+            return Page();
         }
 
         public async Task<IActionResult> OnPost()

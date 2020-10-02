@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter.Models
 {
-    public class HouseObjects
+    public class HouseObject
     {
         [JsonPropertyName("_id")]
         public string Id { get; set; }

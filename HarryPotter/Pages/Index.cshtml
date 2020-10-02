@@ -33,10 +33,10 @@
 <div>
     <section>
         <h3>The Four Houses Are: </h3>
-        @foreach(object s in Model.HouseObjects)
+        @foreach(HarryPotter.Models.HouseObject s in Model.HouseObjects)
         {
-            <p>@Model.HouseObjects</p>
-            <p>@Model.HouseObjects</p>
+            <p>@s.Id</p>
+            <p>@s.HouseName</p>
             <br />
         }
     </section>
