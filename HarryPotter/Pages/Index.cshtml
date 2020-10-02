@@ -32,11 +32,21 @@
 
 <div>
     <section>
-        <h3>The Four Houses Are: </h3>
-        @foreach(object s in Model.HouseObjects)
+        <h3>The Four Hogwarts Houses Are: </h3>
+        @foreach(var h in Model.HouseObjects)
         {
-            <p>@Model.HouseObjects</p>
-            <p>@Model.HouseObjects</p>
+            <p>@h.Id</p>
+            <p>@h.HouseName</p>
+            <p>@h.Mascot</p>
+            <p>@h.Values</p>
+        }
+    </section>
+    <section>
+        <h3>The Four Houses Are: </h3>
+        @foreach(HarryPotter.Models.HouseObject s in Model.HouseObjects)
+        {
+            <p>@s.Id</p>
+            <p>@s.HouseName</p>
             <br />
         }
     </section>

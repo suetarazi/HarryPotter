@@ -7,8 +7,8 @@ namespace HarryPotter.Models.Interfaces
 {
     public interface IHouses
     {
-        public Task<List<HouseObjects>> GetAllHouses();
+        public Task<List<HouseObject>> GetAllHouses();
 
-        public Task<List<HouseObjects>> GetHouseById();
+        public Task<HouseObject> GetHouseById();
     }
 }

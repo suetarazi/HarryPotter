@@ -8,6 +8,7 @@ namespace HarryPotter.Models
 {
     public class HouseArray
     {
+
         public HouseArray[] HousesArray { get; set; }
     }
 }
