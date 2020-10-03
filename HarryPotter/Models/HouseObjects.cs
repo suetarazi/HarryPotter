@@ -4,33 +4,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+
 
 namespace HarryPotter.Models
 {
     public class HouseObject
     {
-        [JsonPropertyName("_id")]
+        [JsonProperty("_id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("name")]
+        [JsonProperty("name")]
         public string HouseName { get; set; }
 
-        [JsonPropertyName("mascot")]
+        [JsonProperty("mascot")]
         public string Mascot { get; set; }
 
-        [JsonPropertyName("headOfHouse")]
+        [JsonProperty("headOfHouse")]
         public string HeadOfHouse { get; set; }
 
-        [JsonPropertyName("houseGhost")]
+        [JsonProperty("houseGhost")]
         public string HouseGhost { get; set; }
 
-        [JsonPropertyName("founder")]
+        [JsonProperty("founder")]
         public string Founder { get; set; }
 
-        [JsonPropertyName("__v")]
+        [JsonProperty("__v")]
         public string V { get; set; }
 
-        [JsonPropertyName("school")]
+        [JsonProperty("school")]
         public string School { get; set; }
 
         [JsonPropertyName("members")]

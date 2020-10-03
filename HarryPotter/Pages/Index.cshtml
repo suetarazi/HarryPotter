@@ -35,19 +35,9 @@
         <h3>The Four Hogwarts Houses Are: </h3>
         @foreach(var h in Model.HouseObjects)
         {
-            <p>@h.Id</p>
             <p>@h.HouseName</p>
-            <p>@h.Mascot</p>
-            <p>@h.Values</p>
+            
         }
     </section>
-    <section>
-        <h3>The Four Houses Are: </h3>
-        @foreach(HarryPotter.Models.HouseObject s in Model.HouseObjects)
-        {
-            <p>@s.Id</p>
-            <p>@s.HouseName</p>
-            <br />
-        }
-    </section>
+
 </div>
