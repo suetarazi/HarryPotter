@@ -38,11 +38,24 @@ namespace HarryPotter.Models.Services
             return HouseInfo;
         }
 
-        public Task<HouseObject> GetHouseById()
+        public async Task<HouseObject> GetHouseById(string houseName)
         {
-            throw new NotImplementedException();
+            string route = "houses";
+
+            _client.DefaultRequestHeaders.Accept.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(
+                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+            var response = await _client.GetStringAsync($"{ baseUrl }/{ route }?key={_config["PotterApiKey"]}");
+
+            List<HouseObject> HouseInfo = JsonConvert.DeserializeObject<List<HouseObject>>(response);
+
+            var queryObject = HouseInfo.Where(h => h.HouseName == houseName);
+
+                return (HouseObject)queryObject;
+
         }
 
-        
+
     }
 }
