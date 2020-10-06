@@ -36,6 +36,8 @@ namespace HarryPotter
             //add mappings
             {
                 services.AddTransient<IHouses, HouseService>();
+                services.AddTransient<ICharacters, CharacterService>();
+                services.AddTransient<ISpells, SpellsService>();
             }
         }
 
