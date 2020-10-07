@@ -18,13 +18,18 @@ namespace HarryPotter.Pages
         [BindProperty]
         public List<HouseObject> HouseObjects { get; set; }
 
+        [BindProperty]
+        public List<SpellsObject> SpellsObjects { get; set; }
+
         private static readonly HttpClient client = new HttpClient();
         private string baseUrl = @"https://www.potterapi.com/v1";
         private IHouses _houses;
+        private ISpells _spells;
 
-        public IndexModel(IHouses houses)
+        public IndexModel(IHouses houses, ISpells spells)
         {
             _houses = houses;
+            _spells = spells;
         }
 
 
@@ -53,5 +58,7 @@ namespace HarryPotter.Pages
             return Page();
 
         }
+
+        
     }
 }

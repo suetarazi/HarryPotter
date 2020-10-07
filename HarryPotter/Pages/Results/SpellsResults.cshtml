@@ -1,4 +1,19 @@
 ﻿@page
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 @model HarryPotter.Pages.Results.SpellsResultsModel
 @{
+    Layout = "_Layout";
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
 }
+
+<h1>Spells</h1>
+<br />
+<div>
+    @foreach(var spell in Model.SpellsObject)
+    {
+        <p>Spell Name: @spell.SpellName</p>
+        <p>Spell Type: @spell.Type</p>
+        <p>Effect: @spell.Effect</p>
+        <br />
+    }
+</div>
