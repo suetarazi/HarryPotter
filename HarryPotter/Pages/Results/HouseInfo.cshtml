@@ -34,5 +34,12 @@
 </section>
 
 <section>
+    <form method="post" asp-page="/Results/CharacterResults">
+        <div>
+            <p>You will meet many fine students in your house. </p>
+            <input asp-for="@Model.oneHouse.HouseName" />
+            <button type="submit">Click here to find out who they are!</button>
+        </div>
 
+    </form>
 </section>

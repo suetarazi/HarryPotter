@@ -17,11 +17,16 @@ namespace HarryPotter.Pages.Results
         [BindProperty]
         public HouseObject oneHouse { get; set; }
 
-        private IHouses _ihouses;
+        [BindProperty]
+        public List<CharacterObject> houseCharacters { get; set; } 
 
-        public HouseInfoModel(IHouses ihouses)
+        private IHouses _ihouses;
+        private ICharacters _icharacters;
+
+        public HouseInfoModel(IHouses ihouses, ICharacters icharacters)
         {
             _ihouses = ihouses;
+            _icharacters = icharacters;
         }
 
         public void OnGet()
@@ -38,5 +43,11 @@ namespace HarryPotter.Pages.Results
 
         }
 
+        //public async Task<List<IActionResult>> OnPostAsync(string house)
+        //{
+        //    houseCharacters = await _icharacters.GetAllCharactersInAHouse(house);
+
+        //    return Page();
+        //}
     }
 }
