@@ -7,4 +7,21 @@
 
 }
 
+<h1>@Model.oneHouse.HouseName</h1>
 
+<h2>House Information</h2>
+<p>@Model.oneHouse.HouseName was founded by @Model.oneHouse.Founder .</p>
+<p>The current head of this house is @Model.oneHouse.HeadOfHouse .</p>
+<p>The house ghost is @Model.oneHouse.HouseGhost and the mascot is @Model.oneHouse.Mascot .</p>
+<br />
+<p>The house colors of @Model.oneHouse.HouseName are: </p>
+    @foreach(var c in Model.oneHouse.Colors)
+    {
+        <p>c</p>
+    }
+
+<p>The values of @Model.oneHouse.HouseName are:  </p>
+    @foreach(var v in Model.oneHouse.Values)
+    {
+        <p>v</p>
+    }

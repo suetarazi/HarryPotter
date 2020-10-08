@@ -49,10 +49,10 @@ namespace HarryPotter.Models.Services
             var response = await _client.GetStringAsync($"{ baseUrl }/{ route }?key={_config["PotterApiKey"]}");
 
             List<HouseObject> HouseInfo = JsonConvert.DeserializeObject<List<HouseObject>>(response);
+            
+            var singleHouse = HouseInfo.Where(h => h.HouseName == houseName);
 
-            var queryObject = HouseInfo.Where(h => h.HouseName == houseName);
-
-                return (HouseObject)queryObject;
+            return (HouseObject)singleHouse;
 
         }
 

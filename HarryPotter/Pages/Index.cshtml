@@ -65,12 +65,18 @@
 
 <div>
     <section>
-        <h3>The Four Hogwarts Houses Are: </h3>
-        @foreach (var h in Model.HouseObjects)
-        {
-            <p>@h.HouseName</p>
+        <h3>Learn More About Each House at Hogwarts</h3>
+        <form method="post" asp-page="/Results/HouseInfo">
+        <label for="house">Select a House: </label>
+        <select name="house" id="house">
 
-        }
+            <option value="Gryffindor">Gryffindor</option>
+            <option value="Hufflepuff">Hufflepuff</option>
+            <option value="Ravenclaw">Ravenclaw</option>
+            <option value="Slytherin">Slytherin</option>
+        </select>
+        <button type="submit">Submit</button>
+        </form>
     </section>
 
 </div>
