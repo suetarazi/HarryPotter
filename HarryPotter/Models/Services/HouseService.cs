@@ -38,9 +38,10 @@ namespace HarryPotter.Models.Services
             return HouseInfo;
         }
 
-        public async Task<HouseObject> GetHouseById(string houseName)
+        public async Task<HouseObject> GetHouseByName(string houseName)
         {
             string route = "houses";
+            //string route = "$houses/{Id}";
 
             _client.DefaultRequestHeaders.Accept.Clear();
             _client.DefaultRequestHeaders.Accept.Add(
@@ -49,10 +50,10 @@ namespace HarryPotter.Models.Services
             var response = await _client.GetStringAsync($"{ baseUrl }/{ route }?key={_config["PotterApiKey"]}");
 
             List<HouseObject> HouseInfo = JsonConvert.DeserializeObject<List<HouseObject>>(response);
+            
+            var singleHouse = HouseInfo.First(h => h.HouseName == houseName);
 
-            var queryObject = HouseInfo.Where(h => h.HouseName == houseName);
-
-                return (HouseObject)queryObject;
+            return singleHouse;
 
         }
 
