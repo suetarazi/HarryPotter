@@ -25,11 +25,11 @@ namespace HarryPotter.Pages.Results
         {
         }
 
-        public async Task<List<IActionResult>> OnPost(string house)
-        {
-            houseCharacters = await _icharacters.GetAllCharactersInAHouse(house);
+        //public async Task<List<IActionResult>> OnPost(string house)
+        //{
+        //    houseCharacters = await _icharacters.GetAllCharactersInAHouse(house);
 
-            return Page();
-        }
+        //    return Page();
+        //}
     }
 }
