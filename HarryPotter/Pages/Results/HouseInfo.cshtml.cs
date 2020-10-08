@@ -14,6 +14,7 @@ namespace HarryPotter.Pages.Results
         [BindProperty]
         public List<HouseObject> houseObjects { get; set; }
 
+        [BindProperty]
         public HouseObject oneHouse { get; set; }
 
         private IHouses _ihouses;
@@ -25,11 +26,13 @@ namespace HarryPotter.Pages.Results
 
         public void OnGet()
         {
+
         }
 
         public async Task<IActionResult> OnPost(string house)
         {
-            oneHouse = await _ihouses.GetHouseById(house);
+            oneHouse = await _ihouses.GetHouseByName(house);
+
 
             return Page();
 

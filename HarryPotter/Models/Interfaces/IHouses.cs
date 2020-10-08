@@ -9,6 +9,6 @@ namespace HarryPotter.Models.Interfaces
     {
         public Task<List<HouseObject>> GetAllHouses();
 
-        public Task<HouseObject> GetHouseById(string houseName);
+        public Task<HouseObject> GetHouseByName(string houseName);
     }
 }

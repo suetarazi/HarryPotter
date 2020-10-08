@@ -6,22 +6,33 @@
     <link rel="stylesheet" href="~/css/StyleSheet.css" />
 
 }
+<img src="https://i.imgur.com/O1kCgMK.jpg" width="450" />
 
 <h1>@Model.oneHouse.HouseName</h1>
 
 <h2>House Information</h2>
 <p>@Model.oneHouse.HouseName was founded by @Model.oneHouse.Founder .</p>
 <p>The current head of this house is @Model.oneHouse.HeadOfHouse .</p>
-<p>The house ghost is @Model.oneHouse.HouseGhost and the mascot is @Model.oneHouse.Mascot .</p>
+<p>The house ghost is @Model.oneHouse.HouseGhost and the mascot is an @Model.oneHouse.Mascot .</p>
 <br />
+<section>
+
 <p>The house colors of @Model.oneHouse.HouseName are: </p>
-    @foreach(var c in Model.oneHouse.Colors)
+    @for(var i=0; i< Model.oneHouse.Colors.Length; i++)
     {
-        <p>c</p>
+        <p>@Model.oneHouse.Colors[i]</p>
     }
+</section>
+
+<section>
 
 <p>The values of @Model.oneHouse.HouseName are:  </p>
     @foreach(var v in Model.oneHouse.Values)
     {
-        <p>v</p>
+        <p>@v</p>
     }
+</section>
+
+<section>
+
+</section>
