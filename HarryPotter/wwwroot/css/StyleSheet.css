@@ -1,5 +1,20 @@
 ﻿body {
     background-color: black;
     color: ghostwhite;
+    display: grid;
 
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#spellBlock{
+    display: grid;
+    width: 90%
+    outline: dotted 1px white;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#spellSearch{
+    float: right;
 }
