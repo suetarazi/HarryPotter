@@ -7,11 +7,12 @@
 
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 .spellBlock{
     display: grid;
-    width: 100%
-    outline: dotted 1px white;
+    /*width: 100%*/
+    /*outline: dotted 1px white;*/
     grid-template-columns: 1fr 1fr 1fr;
 }
 
