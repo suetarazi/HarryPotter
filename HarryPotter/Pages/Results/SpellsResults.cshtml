@@ -27,16 +27,19 @@
 </section>
 
 <br />
-
+<br />
+<br />
 <section>
 <div>
     @foreach(var spell in Model.SpellsObject)
     {
      
-    <div id="spellBlock">
-        <p>Spell Name: @spell.SpellName</p>
-        <p>Spell Type: @spell.Type</p>
-        <p>Effect: @spell.Effect</p>
+    <div class="spellBlock">
+      <ul>
+        <li>Spell Name: @spell.SpellName</li>
+        <li>Spell Type: @spell.Type</li>
+        <li>Effect: @spell.Effect</li>
+      </ul>
         <br />
     </div>
     }

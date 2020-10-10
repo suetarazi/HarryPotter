@@ -8,13 +8,17 @@
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#spellBlock{
+.spellBlock{
     display: grid;
-    width: 90%
+    width: 100%
     outline: dotted 1px white;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 #spellSearch{
     float: right;
+}
+
+li{
+    text-decoration: none;
 }
