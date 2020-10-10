@@ -35,5 +35,22 @@ namespace HarryPotter.Models.Services
 
             return spellsObjects;
         }
+
+        public async Task<List<SpellsObject>> GetSpellsByType(string type)
+        {
+            string route = "spells";
+
+            _client.DefaultRequestHeaders.Accept.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(
+                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+            var response = await _client.GetStringAsync($"{ baseUrl }/{ route }?key={_config["PotterApiKey"]}");
+
+            List<SpellsObject> spellsObjects = JsonConvert.DeserializeObject<List<SpellsObject>>(response);
+
+            var queryObject = spellsObjects.Where(s => s.Type == type);
+
+            return queryObject.ToList();
+        }
     }
 }

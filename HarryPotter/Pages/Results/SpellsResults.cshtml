@@ -9,13 +9,37 @@
 
 <img src ="https://i.imgur.com/nidOirS.jpeg" width="450" />
 <h1>Spells</h1>
+
+<section>
+    <form id="spellSearch" method="post" asp-page="/Results/SearchedSpells">
+        <label for="type">Sort Spells by Type </label>
+        <select name="type" id="type">
+
+            <option value="Charm">Charm</option>
+            <option value="Enchantment">Enchantment</option>
+            <option value="Spell">Spell</option>
+            <option value="Hex">Hex</option>
+            <option value="Curse">Curse</option>
+            <option value="Jinx">Jinx</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
 <br />
+
+<section>
 <div>
     @foreach(var spell in Model.SpellsObject)
     {
+     
+    <div id="spellBlock">
         <p>Spell Name: @spell.SpellName</p>
         <p>Spell Type: @spell.Type</p>
         <p>Effect: @spell.Effect</p>
         <br />
+    </div>
     }
 </div>
+</section>
+
