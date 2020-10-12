@@ -11,19 +11,21 @@
 <h1>@Model.oneHouse.HouseName</h1>
 
 <h2>House Information</h2>
-<p>@Model.oneHouse.HouseName was founded by @Model.oneHouse.Founder .</p>
-<p>The current head of this house is @Model.oneHouse.HeadOfHouse .</p>
-<p>The house ghost is @Model.oneHouse.HouseGhost and the mascot is an @Model.oneHouse.Mascot .</p>
+<p>@Model.oneHouse.HouseName was founded by @Model.oneHouse.Founder and</p>
+<p>the current head of this house is @Model.oneHouse.HeadOfHouse.</p>
+<p>The house ghost is @Model.oneHouse.HouseGhost and the mascot is an @Model.oneHouse.Mascot.</p>
 <br />
 <section>
-
+    <br />
+    <br />
 <p>The house colors of @Model.oneHouse.HouseName are: </p>
     @for(var i=0; i< Model.oneHouse.Colors.Length; i++)
     {
         <p>@Model.oneHouse.Colors[i]</p>
     }
 </section>
-
+    <br />
+    <br />
 <section>
 
 <p>The values of @Model.oneHouse.HouseName are:  </p>
@@ -32,12 +34,13 @@
         <p>@v</p>
     }
 </section>
-
+    <br />
+    <br />
 <section>
-    <form method="post" asp-page="/Results/CharacterResults">
+    <form method="post" asp-route-id="@Model.oneHouse.HouseName" asp-page="/Results/CharacterResults">
         <div>
-            <p>You will meet many fine students in your house. </p>
-            <input asp-for="@Model.oneHouse.HouseName" />
+            <p>Hogwarts employs only the finest professors and staff. They only admit the most qualified students. Meet the characters associated with your house. </p>
+            @*<input asp-for="@Model.oneHouse.HouseName" />*@
             <button type="submit">Click here to find out who they are!</button>
         </div>
 
