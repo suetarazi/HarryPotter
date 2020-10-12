@@ -7,15 +7,42 @@
 }
 
 
-@foreach (var c in Model.houseCharacters)
+<section>
+    <div class="row row-cols-1 row-cols-md-3">
+        @foreach (var character in Model.houseCharacters)
+        {
+
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <div class="card-body elegant-color white-text bg-dark rounded-bottom">
+
+                        <!--Title-->
+                        <h4 class="card-title">Name: @character.CharacterName</h4>
+                        <hr class="hr-light" />
+                        <h2 class="card-text white-text mb-2">Role: @character.Role</h2>
+                        <!--Text-->
+                        <p class="card-text white-text mb-4">
+                            Blood Status: @character.BloodStatus
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+@*@foreach (var c in Model.houseCharacters)
 {
     <p>
-        @c.CharacterName;
+        Name: @c.CharacterName
     </p>
     <p>
-        @c.BloodStatus;
+        Role: @c.Role
     </p>
     <p>
-        @c.House;
-    </p>
+        Blood Status: @c.BloodStatus
+    </p>*@
+
+
 }
