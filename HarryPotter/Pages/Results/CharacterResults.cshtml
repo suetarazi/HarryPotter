@@ -7,4 +7,15 @@
 }
 
 
-@Model.houseCharacters
+@foreach (var c in Model.houseCharacters)
+{
+    <p>
+        @c.CharacterName;
+    </p>
+    <p>
+        @c.BloodStatus;
+    </p>
+    <p>
+        @c.House;
+    </p>
+}
