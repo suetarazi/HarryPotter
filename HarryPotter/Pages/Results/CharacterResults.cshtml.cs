@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,21 +16,23 @@ namespace HarryPotter.Pages.Results
         public List<CharacterObject> houseCharacters { get; set; }
 
         private ICharacters _icharacters;
+        //private IEnumerable _enumerable;
 
         public CharacterResultsModel(ICharacters icharacters)
         {
             _icharacters = icharacters;
+         //   _enumerable = enumerable;
         }
 
         public void OnGet()
         {
         }
 
-        //public async Task<List<IActionResult>> OnPost(string house)
-        //{
-        //    houseCharacters = await _icharacters.GetAllCharactersInAHouse(house);
+        public async Task<IActionResult> OnPost(string house)
+        {
+            houseCharacters = await _icharacters.GetAllCharactersInAHouse(house);
 
-        //    return Page();
-        //}
+            return Page();
+        }
     }
 }
