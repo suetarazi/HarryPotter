@@ -9,25 +9,25 @@
 
 <div class="text-center">
     <h1 class="display-4">Hogwarts School of Witchcraft and Wizardry</h1>
-    <img src="https://i.imgur.com/GNtAFrh.jpeg" width="1000" />
+    <img src="https://i.imgur.com/GNtAFrh.jpeg" />
 </div>
 <br />
 <p>Contgratulations on your acceptance into Hogwarts School of Witchcraft and Wizardry! Our fine institution of magic welcomes you! In order to have everything ready to go when you arrive, please allow the Sorting Hat below to assign you to a house. Then feel free to learn more about that house or any other below. </p>
 <br />
+<br />
+<br />
 <div>
     <section>
-        <h2>Sorting Hat</h2>
-        <img src="https://i.imgur.com/o0HDcDc.png" width="150" />
+        <div class="text-center">
+            <h2 >Sorting Hat</h2>
+            <br />
+            <img src="https://i.imgur.com/o0HDcDc.png" width="150" />
+            <br />
+            <br />
+        </div>
+        <div>
         <p>Welcome to Hogwarts! All students are sorted into one of four Houses upon arrival at Hogwarts. </p>
-        @*<form method="post">
-            <input asp-for="House" />
-            <p>Please press Submit so the Sorting Hat can decide which house you are best suited for at Hogwarts</p>
-            <br />
-            <input type="submit" />
-            <br />
-            <br />
-            <p>Congratulations! The Sorting Hat has placed you in @Model.House !</p>
-        </form>*@
+        </div>
     </section>
 </div>
 
@@ -39,7 +39,7 @@
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade"ng-  id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -63,6 +63,9 @@
     </form>
 </div>
 
+<br />
+<br />
+<br />
 <section>
     <div>
         <h3>Learn More About Each House at Hogwarts</h3>
@@ -79,13 +82,15 @@
         </form>
     </div>
 </section>
-
+<br />
+<br />
+<br />
 
 <section>
     <div>
         <h3>Spells</h3>
         <p>There are many powerful spells you will learn during your education at Hogwarts. Click below to see a list of what you may learn.</p>
-        <br />
+        
         <form method="post" asp-page="/Results/SpellsResults">
             <div>
                 <button type="submit">Hogwarts Spells</button>
