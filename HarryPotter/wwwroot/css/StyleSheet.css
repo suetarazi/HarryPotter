@@ -26,11 +26,11 @@ li{
 }
 
 .modal-backdrop {
-    opacity: 0.1;
+    opacity: 1.0;
 }
 
 #myModal {
-    background-color: aqua;
+    /*background-color: aqua;*/
     color: black;
 }
 
@@ -40,7 +40,7 @@ li{
 
 div.modal-content {
     color: black;
-    background-color: aqua;
+    /*background-color: aqua;*/
 }
 div.modal-title, div.modal-header, div.modal-body {
     color: black;
