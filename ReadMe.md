@@ -51,17 +51,26 @@ The dotnet tools will automatically restore any NuGet dependencies.
 
 ## Usage
 
-### Overview of Recent Posts
-![Overview of Recent Posts](https://via.placeholder.com/500x250)
+### Index (top portion of page)
+![https://i.imgur.com/cQibrJR.png](https://i.imgur.com/cQibrJR.png)
 
-### Creating a Post
-![Post Creation](https://via.placeholder.com/500x250)
+### Index (bottom portion of page)
+![https://i.imgur.com/3FsFiHW.png](https://i.imgur.com/3FsFiHW.png)
 
-### Enriching a Post
-![Enriching Post](https://via.placeholder.com/500x250)
+### Modal showing Sorting Hat Result 
+![https://i.imgur.com/cjwp6zB.png](https://i.imgur.com/cjwp6zB.png)
 
-### Viewing Post Details
-![Details of Post](https://via.placeholder.com/500x250)
+### Viewing House Details
+![https://i.imgur.com/bEoiIvF.png](https://i.imgur.com/bEoiIvF.png)
+
+### Viewing Characters Associated with House 
+![https://i.imgur.com/e1466wF.png](https://i.imgur.com/e1466wF.png)
+
+### Viewing All Spells 
+![https://i.imgur.com/13aJI71.png](https://i.imgur.com/13aJI71.png)
+
+### Viewing Spells By Type
+![https://i.imgur.com/SkMtpII.png](https://i.imgur.com/SkMtpII.png)
 
 ---
 ## Data Flow (Frontend, Backend, REST API)
