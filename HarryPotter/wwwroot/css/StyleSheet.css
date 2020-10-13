@@ -1,5 +1,47 @@
 ﻿body {
     background-color: black;
     color: ghostwhite;
+    display: grid;
 
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*text-align: center;*/
+}
+.spellBlock{
+    display: grid;
+    /*width: 100%*/
+    /*outline: dotted 1px white;*/
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#spellSearch{
+    float: right;
+    margin-right: 100px;
+}
+
+li{
+    text-decoration: none;
+}
+
+.modal-backdrop {
+    opacity: 0.1;
+}
+
+#myModal {
+    background-color: aqua;
+    color: black;
+}
+
+.modal-fade {
+    color: black;
+}
+
+div.modal-content {
+    color: black;
+    background-color: aqua;
+}
+div.modal-title, div.modal-header, div.modal-body {
+    color: black;
 }

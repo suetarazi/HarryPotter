@@ -1,0 +1,55 @@
+﻿@page
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@model HarryPotter.Pages.Results.HouseInfoModel
+@{
+    Layout = "_Layout";
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+
+}
+<div class="text-center">
+    <img src="https://i.imgur.com/O1kCgMK.jpg" width="450" />
+</div>
+
+<h1>@Model.oneHouse.HouseName</h1>
+<br />
+<br />
+
+<h2>House Information</h2>
+<p>@Model.oneHouse.HouseName was founded by @Model.oneHouse.Founder and</p>
+<p>the current head of this house is @Model.oneHouse.HeadOfHouse.</p>
+<p>The house ghost is @Model.oneHouse.HouseGhost and the mascot is an @Model.oneHouse.Mascot.</p>
+<br />
+<section>
+    <br />
+    <br />
+<p>The house colors of @Model.oneHouse.HouseName are: </p>
+    @for(var i=0; i< Model.oneHouse.Colors.Length; i++)
+    {
+        <p>@Model.oneHouse.Colors[i]</p>
+    }
+</section>
+    <br />
+    <br />
+<section>
+
+<p>The values of @Model.oneHouse.HouseName are:  </p>
+    @foreach(var v in Model.oneHouse.Values)
+    {
+        <p>@v</p>
+    }
+</section>
+    <br />
+    <br />
+<section>
+    <form method="post" asp-route-id="@Model.oneHouse.HouseName" asp-page="/Results/CharacterResults">
+        <div>
+            <p>Hogwarts employs only the finest professors and staff. They only admit the most qualified students. Meet the characters associated with your house. </p>
+            @*<input asp-for="@Model.oneHouse.HouseName" />*@
+            <button type="submit">Click here to find out who they are!</button>
+        </div>
+
+    </form>
+</section>
+<br />
+<br />
+<br />
