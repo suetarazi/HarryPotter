@@ -74,8 +74,8 @@ The dotnet tools will automatically restore any NuGet dependencies.
 
 ---
 ## Data Flow (Frontend, Backend, REST API)
-***[Add a clean and clear explanation of what the data flow is. Walk me through it.]***
-![Data Flow Diagram](/assets/img/Flowchart.png)
+The following is the ASP.NET Core architecture of the application, which then consumes the external Harry Potter API
+![https://i.imgur.com/RSEypeX.jpeg](https://i.imgur.com/RSEypeX.jpeg)
 
 ---
 
