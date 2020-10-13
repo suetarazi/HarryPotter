@@ -80,11 +80,7 @@ The following is the ASP.NET Core architecture of the application, which then co
 ---
 
 ## Change Log
-***[The change log will list any changes made to the code base. This includes any changes from TA/Instructor feedback]***  
-1.4: *Added OAuth for MySpace* - 23 Jan 2003  
-1.3: *Changed email handler to Alta Vista, fixed issue with styling on Netscape Navigator browser.* - 21 Dec 1999  
-1.2: *Fixed bug where pages would not load due to temp data* - 16 Jun 1998  
-1.1: *Added ability for user to change photos on a post* - 12 May 1998  
+1.1 fixed modal rendering 
 
 ---
 
