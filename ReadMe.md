@@ -87,6 +87,8 @@ The following is the ASP.NET Core architecture of the application, which then co
 ## Authors
 Sue Tarazi
 
+Thank you to Andrew Casper for being a great resource when I got stuck on this project! 
+
 ---
 
 For more information on Markdown: https://www.markdownguide.org/cheat-sheet
