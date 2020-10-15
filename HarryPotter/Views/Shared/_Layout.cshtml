@@ -26,8 +26,8 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         @*<li class="nav-item">
-                            <a class="nav-link text-dark" href="/Results/SpellsResults">Spells</a>
-                        </li>*@
+                                <a class="nav-link text-dark" href="/Results/SpellsResults">Spells</a>
+                            </li>*@
 
                     </ul>
                 </div>
@@ -48,10 +48,20 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script type="text/javascript">$('#myModal').modal({
+    @*<script type="text/javascript">
+    $('#myModal').modal({
+
             backdrop: 'static',
             keyboard: false
-    });
+        });
+    </script>*@
+
+    <script type="text/javascript">
+    $('#myModal').modal({
+            onClick: 'show',
+            backdrop: 'static',
+            keyboard: false
+        });
     </script>
     @RenderSection("Scripts", required: false)
 </body>
