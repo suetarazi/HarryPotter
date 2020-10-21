@@ -35,13 +35,16 @@
 </div>
 
 <div>
-    <form method="post">
+    <form method="post" action="">
         <!-- Button trigger modal -->
         <button type="submit" id="sortResultModal" class="btn btn-light" data-target="#sortingHatModal" data-toggle="modal">
             
             Sort me into a House
         </button>
+    </form>
 
+    @if(IsPost)
+    {
         <!-- Modal -->
         <div class="modal fade" id="sortingHatModal" rounded-bottom tabindex="-1">
             <div class="modal-dialog" bg-dark>
@@ -62,7 +65,8 @@
                 </div>
             </div>
         </div>
-    </form>
+    @*</form>*@
+    }
 </div>
 
 <br />
