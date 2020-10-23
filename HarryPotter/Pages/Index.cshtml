@@ -43,8 +43,8 @@
         </button>
     </form>
 
-    @if(IsPost)
-    {
+ 
+ 
         <!-- Modal -->
         <div class="modal fade" id="sortingHatModal" rounded-bottom tabindex="-1">
             <div class="modal-dialog" bg-dark>
@@ -66,7 +66,7 @@
             </div>
         </div>
     @*</form>*@
-    }
+ 
 </div>
 
 <br />
@@ -110,7 +110,7 @@
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
 
-@*<script type="text/javascript">
+<script type="text/javascript">
     $(document).ready(function () {
         $('#sortResultModal').click(function () {
             $('#sortingHatModal').modal('show');
@@ -119,8 +119,8 @@
         });
         
     });
-</script>*@
-<script type="text/javascript">
+</script>
+@*<script type="text/javascript">
     protected void OnSelectedIndexChanged(object sender, EventArgs e)
     {
         ClientScript.RegisterStartupScript(this.GetType(), "sortingHatModal",
@@ -131,4 +131,4 @@
     ClientScript.RegisterStartupScript(Me.GetType(), "sortingHatModal",
         "$('#sortingHatModal').modal('show')", true)
     End Sub
-</script>
+</script>*@
