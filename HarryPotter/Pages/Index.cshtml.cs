@@ -21,8 +21,8 @@ namespace HarryPotter.Pages
         [BindProperty]
         public List<SpellsObject> SpellsObjects { get; set; }
 
-        private static readonly HttpClient client = new HttpClient();
-        private string baseUrl = @"https://www.potterapi.com/v1";
+        //private static readonly HttpClient client = new HttpClient();
+        //private string baseUrl = @"https://www.potterapi.com/v1";
         private IHouses _houses;
         private ISpells _spells;
 
@@ -39,24 +39,6 @@ namespace HarryPotter.Pages
             //HouseObject results = new HouseObject();
             //HouseObjects.results = gettingHouseInfo;
             return Page();
-        }
-
-        public async Task<IActionResult> OnPost()
-        {
-            //House = Request.Form[nameof(House)];
-            string route = "sortingHat";
-
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-
-            var response = await client.GetStringAsync($"{ baseUrl }/{ route }");
-
-            House = JsonConvert.DeserializeObject<string>(response);
-
-            
-            return Page();
-
         }
 
         

@@ -21,17 +21,19 @@ namespace HarryPotter.Pages.Results
             _spells = spells;
         }
 
-        public void OnGet()
+        public async Task<IActionResult> OnGet()
         {
-        }
-
-        public async Task<IActionResult> OnPost()
-        {
+            
             SpellsObject = await _spells.GetAllSpells();
 
             return Page();
 
         }
+
+        //public async Task<IActionResult> OnPost()
+        //{
+
+        //}
 
     }
 }

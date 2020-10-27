@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="~/css/StyleSheet.css" />
 }
 
+<body style="background-color:black; color:ghostwhite;">
+
 <div class="text-center">
-<img src ="https://i.imgur.com/nidOirS.jpeg" width="450" />
+    <img src="https://i.imgur.com/nidOirS.jpeg" width="450" />
 </div>
 <br />
 <br />
@@ -27,7 +29,7 @@
             <option value="Curse">Curse</option>
             <option value="Jinx">Jinx</option>
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-light">Submit</button>
     </form>
 </section>
 
@@ -35,56 +37,58 @@
 <br />
 <br />
 @*<section>
-<div>
-    @foreach(var spell in Model.SpellsObject)
-    {
-     
-    <div class="spellBlock">
-      <ul>
-        <li>Spell Name: @spell.SpellName</li>
-        <li>Spell Type: @spell.Type</li>
-        <li>Effect: @spell.Effect</li>
-      </ul>
-        <br />
+    <div>
+        @foreach(var spell in Model.SpellsObject)
+        {
+
+        <div class="spellBlock">
+          <ul>
+            <li>Spell Name: @spell.SpellName</li>
+            <li>Spell Type: @spell.Type</li>
+            <li>Effect: @spell.Effect</li>
+          </ul>
+            <br />
+        </div>
+        }
     </div>
-    }
-</div>
-</section>*@
+    </section>*@
 
 <section>
     <div class="row row-cols-1 row-cols-md-3">
         @foreach (var spell in Model.SpellsObject)
         {
 
-    <div class="col mb-4">
-        <div class="card h-100">
-            <!--Card image-->
-            @*<div class="view overlay">
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                     alt="Card image cap">
-                <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>*@
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <!--Card image-->
+                    @*<div class="view overlay">
+                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+                                 alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>*@
 
-            <!--Card content-->
-            <div class="card-body elegant-color white-text bg-dark rounded-bottom">
+                    <!--Card content-->
+                    <div class="card-body elegant-color white-text bg-dark rounded-bottom">
 
-                <!--Title-->
-                <h4 class="card-title">@spell.SpellName</h4>
-                <hr class="hr-light" />
-                <h2 class="card-text white-text mb-2">@spell.Type</h2>    
-            <!--Text-->
-                <p class="card-text white-text mb-4">
-                    @spell.Effect
-                </p>
-                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                <!--<button type="button" class="btn btn-light-blue btn-md">Read more</button>-->
+                        <!--Title-->
+                        <h4 class="card-title">@spell.SpellName</h4>
+                        <hr class="hr-light" />
+                        <h2 class="card-text white-text mb-2">@spell.Type</h2>
+                        <!--Text-->
+                        <p class="card-text white-text mb-4">
+                            @spell.Effect
+                        </p>
+                        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                        <!--<button type="button" class="btn btn-light-blue btn-md">Read more</button>-->
 
+                    </div>
+
+                </div>
             </div>
-
-        </div>
-    </div>
         }
     </div>
 </section>
+
+</body>
