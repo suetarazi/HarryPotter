@@ -1,4 +1,4 @@
-﻿@page
+@page
 @addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 @model HarryPotter.Pages.IndexModel
 
@@ -10,8 +10,10 @@
 <body style="background-color:black; color:ghostwhite;">
 
 <div class="text-center">
-    <h1 class="display-4">Hogwarts School of <br />
-    Witchcraft and Wizardry</h1>
+    <h1 class="display-4">
+        Hogwarts School of <br />
+        Witchcraft and Wizardry
+    </h1>
     <img src="https://i.imgur.com/GNtAFrh.jpeg" />
 </div>
 <br />
@@ -20,6 +22,9 @@
 <p>We are excited to teach you to become a powerful witch or wizard! You can get a sneak peek at some of the spells, charms, jinxes and more by accessing our Spells section below. But please remember the Hogwarts rule: you may not perform any spells while in the Muggle world!</p>
 
 <p>See you on the Hogwarts Express departing from platform 9 3/4 in a few weeks!</p>
+
+<p>Congratulations on your acceptance into Hogwarts School of Witchcraft and Wizardry! Our fine institution of magic welcomes you! In order to have everything ready to go when you arrive, please allow the Sorting Hat below to assign you to a house. Then feel free to learn more about that house or any other below. </p>
+
 <br />
 <br />
 <br />
@@ -46,29 +51,10 @@
             Sort me into a House
         </button>
 
-        <!-- Modal -->
-        <!--<div class="modal fade" id="myModal" rounded-bottom tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-             aria-hidden="true" .text-primary>
-            <div class="modal-dialog" role="document" bg-dark>
-                <div class="modal-content" bg-dark>
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Congratulations! You have been sorted into </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>House name: </p>
-                        <p>@Model.House</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+     </form>
 
-                    </div>
-                </div>
-            </div>
-        </div>-->
-    </form>
+ 
+ 
 </div>
 
 <br />
@@ -99,9 +85,10 @@
         <h3>Spells</h3>
         <p>There are many powerful spells you will learn during your education at Hogwarts. Click below to see a list of what you may learn.</p>
 
-        <form method="get" asp-page="/Results/SpellsResults">
+        <form method="post" asp-page="/Results/SpellsResults">
             <div>
-                <button class="btn btn-light">Hogwarts Spells</button>
+                <button type="submit" class="btn btn-light">Hogwarts Spells</button>
+
             </div>
         </form>
     </div>
