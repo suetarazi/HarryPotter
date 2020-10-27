@@ -31,6 +31,7 @@
     </section>
 </div>
 
+
 <div>
     <form method="post">
     <!-- Button trigger modal -->
@@ -78,7 +79,7 @@
             <option value="Ravenclaw">Ravenclaw</option>
             <option value="Slytherin">Slytherin</option>
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-light">Submit</button>
         </form>
     </div>
 </section>
@@ -91,9 +92,9 @@
         <h3>Spells</h3>
         <p>There are many powerful spells you will learn during your education at Hogwarts. Click below to see a list of what you may learn.</p>
         
-        <form method="post" asp-page="/Results/SpellsResults">
+        <form method="get" asp-page="/Results/SpellsResults">
             <div>
-                <button type="submit">Hogwarts Spells</button>
+                <button class="btn btn-light">Hogwarts Spells</button>
             </div>
         </form>
     </div>
