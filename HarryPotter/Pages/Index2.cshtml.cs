@@ -19,6 +19,7 @@ namespace HarryPotter.Pages
         private static readonly HttpClient client = new HttpClient();
         private string baseUrl = @"https://www.potterapi.com/v1";
 
+        //Get route for sorting hat
         public async Task<IActionResult> OnGet()
         {
             //House = Request.Form[nameof(House)];
