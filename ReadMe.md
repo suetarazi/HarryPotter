@@ -1,48 +1,35 @@
-# Project README Example
-
-## Project A.M.A.N.D.A.
----
-### We are deployed on Azure!
-
-[project url here]
+# Harry Potter - Hogwarts School of Witchcraft and Wizardry
 
 ---
-## Web Application
-***[Explain your app, should be at least a paragraph. What does it do? Why should I use? Sell your product!]***
+### Deployed on Azure!
 
-The web application consists of a frontend written in Razor views, HTML, CSS,
-Bootstrap, Popper, and jQuery. The backend was written in C# using ASP.NET Core 2, Entity Framework Core, and the MVC framework.
+[https://harrypotterhogwarts.azurewebsites.net](https://harrypotterhogwarts.azurewebsites.net)
 
-An interface is provided to create new blog
-posts, view existing blog posts, edit existing blog posts, delete existing
-blog posts, and search by both keywords and usernames. All blog posts can be
-enriched using Azure Language Services (part of Microsoft's Cognitive Services
-suite), Bing Image API, and Parallel Dots (for automated tagging of posts via
-key phrases detected within the post's body). Image enrichments can be added
-based on the overall sentiment score (a range 0.0 - 1.0 related to the mood
-of the post) and key phrases / keywords detected in the posts. Optionally, users
-can choose to opt-out of these features for privacy or data collection concerns.
+---
+## Web & Mobile Application
+
+The web and mobile application consists of a frontend written in Razor Pages, HTML, CSS,
+Bootstrap and jQuery. The backend was written in C# using ASP.NET Core, Entity Framework Core, and the MVC framework.
+
+This application is a fictitious 'acceptance' into Hogwarts School of Witchcraft and Wizardry and consumes an external API. The application hits several endpoints of the API and also queries API data in Services (in cases where there isn't an endpoint for the desired data) as the application guides the user through the world of Harry Potter. First, the user is encouraged to use the Sorting Hat to sort themselves into a house. Then, the user can view details about that house (or any other house). From the house page, they can drill down further to learn about the faculty, staff and students associated with that house. There is also another section of the application called Spells that returns all spells taught at Hogwarts. From the Spells page, a user can select from a pull down menu and narrow search results by spell type.  
 
 ---
 
 ## Tools Used
-Microsoft Visual Studio Community 2017 (Version 15.5.7)
+Microsoft Visual Studio Community 2019 (Version 16.7.3)
 
 - C#
 - ASP.Net Core
 - Entity Framework
 - MVC
-- xUnit
+- JQuery
 - Bootstrap
 - Azure
-- Parallel Dots API
+- Harry Potter API: [https://www.potterapi.com/](https://www.potterapi.com/)
 
 ---
 
 ## Recent Updates
-
-#### V 1.4
-*Added OAuth for MySpace* - 23 Jan 2003
 
 ---
 
@@ -51,96 +38,56 @@ Microsoft Visual Studio Community 2017 (Version 15.5.7)
 Clone this repository to your local machine.
 
 ```
-$ git clone https://github.com/YourRepo/YourProject.git
+$ git clone https://github.com/suetarazi/HarryPotter.git
 ```
 Once downloaded, you can either use the dotnet CLI utilities or Visual Studio 2017 (or greater) to build the web application. The solution file is located in the AmandaFE subdirectory at the root of the repository.
 ```
 cd YourRepo/YourProject
 dotnet build
 ```
-The dotnet tools will automatically restore any NuGet dependencies. Before running the application, the provided code-first migration will need to be applied to the SQL server of your choice configured in the /AmandaFE/AmandaFE/appsettings.json file. This requires the Microsoft.EntityFrameworkCore.Tools NuGet package and can be run from the NuGet Package Manager Console:
-```
-Update-Database
-```
-Once the database has been created, the application can be run. Options for running and debugging the application using IIS Express or Kestrel are provided within Visual Studio. From the command line, the following will start an instance of the Kestrel server to host the application:
-```
-cd YourRepo/YourProject
-dotnet run
-```
-Unit testing is included in the AmandaFE/FrontendTesting project using the xUnit test framework. Tests have been provided for models, view models, controllers, and utility classes for the application.
+The dotnet tools will automatically restore any NuGet dependencies. 
 
 ---
 
 ## Usage
-***[Provide some images of your app with brief description as title]***
 
-### Overview of Recent Posts
-![Overview of Recent Posts](https://via.placeholder.com/500x250)
+### Index (top portion of page)
+![https://i.imgur.com/cQibrJR.png](https://i.imgur.com/cQibrJR.png)
 
-### Creating a Post
-![Post Creation](https://via.placeholder.com/500x250)
+### Index (bottom portion of page)
+![https://i.imgur.com/3FsFiHW.png](https://i.imgur.com/3FsFiHW.png)
 
-### Enriching a Post
-![Enriching Post](https://via.placeholder.com/500x250)
+### Modal showing Sorting Hat Result 
+![https://i.imgur.com/cjwp6zB.png](https://i.imgur.com/cjwp6zB.png)
 
-### Viewing Post Details
-![Details of Post](https://via.placeholder.com/500x250)
+### Viewing House Details
+![https://i.imgur.com/bEoiIvF.png](https://i.imgur.com/bEoiIvF.png)
+
+### Viewing Characters Associated with House 
+![https://i.imgur.com/e1466wF.png](https://i.imgur.com/e1466wF.png)
+
+### Viewing All Spells 
+![https://i.imgur.com/13aJI71.png](https://i.imgur.com/13aJI71.png)
+
+### Viewing Spells By Type
+![https://i.imgur.com/SkMtpII.png](https://i.imgur.com/SkMtpII.png)
 
 ---
 ## Data Flow (Frontend, Backend, REST API)
-***[Add a clean and clear explanation of what the data flow is. Walk me through it.]***
-![Data Flow Diagram](/assets/img/Flowchart.png)
-
----
-## Data Model
-
-### Overall Project Schema
-***[Add a description of your DB schema. Explain the relationships to me.]***
-![Database Schema](/assets/img/ERD.png)
-
----
-## Model Properties and Requirements
-
-### Blog
-
-| Parameter | Type | Required |
-| --- | --- | --- |
-| ID  | int | YES |
-| Summary | string | YES |
-| Content | string | YES |
-| Tags | string(s) | NO |
-| Picture | img jpeg/png | NO |
-| Sentiment | float | NO |
-| Keywords | string(s) | NO |
-| Related Posts | links | NO |
-| Date | date/time object | YES |
-
-
-### User
-
-| Parameter | Type | Required |
-| --- | --- | --- |
-| ID  | int | YES |
-| Name/Author | string | YES |
-| Posts | list | YES |
+The following is the ASP.NET Core architecture of the application, which then consumes the external Harry Potter API
+![https://i.imgur.com/RSEypeX.jpeg](https://i.imgur.com/RSEypeX.jpeg)
 
 ---
 
 ## Change Log
-***[The change log will list any changes made to the code base. This includes any changes from TA/Instructor feedback]***  
-1.4: *Added OAuth for MySpace* - 23 Jan 2003  
-1.3: *Changed email handler to Alta Vista, fixed issue with styling on Netscape Navigator browser.* - 21 Dec 1999  
-1.2: *Fixed bug where pages would not load due to temp data* - 16 Jun 1998  
-1.1: *Added ability for user to change photos on a post* - 12 May 1998  
+1.1 fixed modal rendering 
 
 ---
 
 ## Authors
-Albus Dumbbledore
-Igor Karkaroff
-Minerva McGonagall
-Leta Lestrange
-Gellert Grindelwald
+Sue Tarazi
+
+Thank you to Andrew Casper for being a great resource when I got stuck on this project! 
 
 ---
 
