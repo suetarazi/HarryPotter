@@ -24,3 +24,24 @@ h1{
 li{
     text-decoration: none;
 }
+
+.modal-backdrop {
+    opacity: 0.1;
+}
+
+#myModal {
+    background-color: aqua;
+    color: black;
+}
+
+.modal-fade {
+    color: black;
+}
+
+div.modal-content {
+    color: black;
+    background-color: aqua;
+}
+div.modal-title, div.modal-header, div.modal-body {
+    color: black;
+}
